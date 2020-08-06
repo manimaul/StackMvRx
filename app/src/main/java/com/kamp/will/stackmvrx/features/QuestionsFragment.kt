@@ -7,13 +7,15 @@ import com.kamp.will.stackmvrx.R
 import com.kamp.will.stackmvrx.core.BaseFragment
 import com.kamp.will.stackmvrx.core.MvRxViewModel
 import com.kamp.will.stackmvrx.core.simpleController
+import com.kamp.will.stackmvrx.network.StackExchangeService
 import com.kamp.will.stackmvrx.view.basicRow
 import com.kamp.will.stackmvrx.view.marquee
-
 
 data class QuestionsState(val title: String = "Hello Epoxy") : MvRxState
 
 class MainViewModel(initialState: QuestionsState) : MvRxViewModel<QuestionsState>(initialState) {
+    private val stackExchangeService = StackExchangeService()
+
     fun getMoreExcited() = setState { copy(title = "$title!") }
 }
 

@@ -25,8 +25,13 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = JavaVersion.VERSION_1_8
     }
 }
 
@@ -44,10 +49,15 @@ dependencies {
     implementation "com.airbnb.android:paris:1.7.1"
     kapt "com.airbnb.android:paris-processor:1.7.1"
     implementation "com.airbnb.android:epoxy:3.11.0"
-    implementation 'com.airbnb.android:epoxy-annotations:3.11.0'
+    implementation "com.airbnb.android:epoxy-annotations:3.11.0"
     kapt "com.airbnb.android:epoxy-processor:3.11.0"
-    //todo: (WK) Moshi, Retrofit, Dagger Hilt, RxJava, Coroutines
-    
+    //todo: (WK) Dagger Hilt
+
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.retrofit2:converter-moshi:2.9.0"
+    implementation "com.squareup.moshi:moshi-kotlin:1.9.3"
+
+
     testImplementation "junit:junit:4.12"
     androidTestImplementation "androidx.test.ext:junit:1.1.1"
     androidTestImplementation "androidx.test.espresso:espresso-core:3.2.0"
