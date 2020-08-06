@@ -11,5 +11,4 @@ class QuestionEpoxyController : EpoxyController() {
             title("hello epoxy")
         }
     }
-
 }

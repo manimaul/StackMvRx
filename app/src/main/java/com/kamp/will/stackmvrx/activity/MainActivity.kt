@@ -1,9 +1,9 @@
-package com.kamp.will.stackmvrx.questions.activity
+package com.kamp.will.stackmvrx.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.kamp.will.stackmvrx.R
-import com.kamp.will.stackmvrx.questions.fragment.MainFragment
+import com.kamp.will.stackmvrx.questions.fragment.QuestionsFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.main_activity)
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                    .replace(R.id.container, MainFragment.newInstance())
+                    .replace(R.id.container, QuestionsFragment.newInstance())
                     .commitNow()
         }
     }
