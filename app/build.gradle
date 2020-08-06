@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "com.kamp.will.stackmvrx"
-        minSdkVersion 23
+        minSdkVersion 24
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -43,7 +43,9 @@ dependencies {
     implementation "com.airbnb.android:mvrx:1.5.1"
     implementation "com.airbnb.android:paris:1.7.1"
     kapt "com.airbnb.android:paris-processor:1.7.1"
-    implementation 'com.airbnb.android:epoxy:3.11.0'
+    implementation "com.airbnb.android:epoxy:3.11.0"
+    implementation 'com.airbnb.android:epoxy-annotations:3.11.0'
+    kapt "com.airbnb.android:epoxy-processor:3.11.0"
     //todo: (WK) Moshi, Retrofit, Dagger Hilt, RxJava, Coroutines
     
     testImplementation "junit:junit:4.12"

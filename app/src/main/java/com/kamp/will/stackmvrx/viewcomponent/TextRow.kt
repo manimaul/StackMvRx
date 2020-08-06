@@ -11,7 +11,7 @@ import com.kamp.will.stackmvrx.R
 
 
 @Styleable // Dynamic styling via the Paris library
-@ModelView
+@ModelView(autoLayout = ModelView.Size.MATCH_WIDTH_WRAP_HEIGHT)
 class TextRow @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : FrameLayout(context, attrs, defStyleAttr) {
