@@ -44,6 +44,7 @@ dependencies {
     implementation "com.airbnb.android:paris:1.7.1"
     kapt "com.airbnb.android:paris-processor:1.7.1"
     implementation 'com.airbnb.android:epoxy:3.11.0'
+    //todo: (WK) Moshi, Retrofit, Dagger Hilt, RxJava, Coroutines
     
     testImplementation "junit:junit:4.12"
     androidTestImplementation "androidx.test.ext:junit:1.1.1"

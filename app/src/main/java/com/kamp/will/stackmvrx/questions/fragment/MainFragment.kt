@@ -1,4 +1,4 @@
-package com.kamp.will.stackmvrx.fragment
+package com.kamp.will.stackmvrx.questions.fragment
 
 import android.os.Bundle
 import android.view.View
@@ -6,7 +6,7 @@ import com.airbnb.mvrx.BaseMvRxFragment
 import com.airbnb.mvrx.fragmentViewModel
 import com.airbnb.mvrx.withState
 import com.kamp.will.stackmvrx.R
-import com.kamp.will.stackmvrx.viewmodel.MainViewModel
+import com.kamp.will.stackmvrx.questions.viewmodel.MainViewModel
 import kotlinx.android.synthetic.main.main_fragment.*
 
 class MainFragment : BaseMvRxFragment(R.layout.main_fragment) {

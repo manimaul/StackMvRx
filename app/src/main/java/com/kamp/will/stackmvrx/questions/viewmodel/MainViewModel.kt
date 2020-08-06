@@ -1,4 +1,4 @@
-package com.kamp.will.stackmvrx.viewmodel
+package com.kamp.will.stackmvrx.questions.viewmodel
 
 import com.airbnb.mvrx.BaseMvRxViewModel
 import com.airbnb.mvrx.MvRxState
