@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Stack MvRx</string>
+    <string name="error">Whoops, some thing bad happened!</string>
+    <string name="error_retry">Retry request?</string>
 </resources>

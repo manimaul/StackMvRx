@@ -41,6 +41,7 @@ class BasicRow @JvmOverloads constructor(
 
     @CallbackProp
     fun setClickListener(clickListener: OnClickListener?) {
+        isClickable = clickListener != null
         setOnClickListener(clickListener)
     }
 }
