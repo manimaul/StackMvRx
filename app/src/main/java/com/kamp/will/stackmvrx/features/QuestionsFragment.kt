@@ -61,10 +61,12 @@ class QuestionsFragment : BaseFragment(R.layout.questions_fragment) {
             }
             is Success -> {
                 questions().items?.forEachIndexed { i, item ->
-                    basicRow {
-                        id("question $i")
-                        title(item.title!!)
-                        subtitle(item.owner?.displayName)
+                    item.title?.let {
+                        basicRow {
+                            id("question $i")
+                            title(item.title)
+                            subtitle(R.string.view_answers)
+                        }
                     }
                 }
             }
