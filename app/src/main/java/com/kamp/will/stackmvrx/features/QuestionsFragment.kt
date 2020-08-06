@@ -17,10 +17,10 @@ import kotlinx.coroutines.launch
 
 data class QuestionsState(
     val title: String = "Hello StackMvRx",
-    val questions: Async<Questions> = Loading()
+    val questions: Async<Questions> = Uninitialized
 ) : MvRxState
 
-class MainViewModel(initialState: QuestionsState) : MvRxViewModel<QuestionsState>(initialState) {
+class QuestionsViewModel(initialState: QuestionsState) : MvRxViewModel<QuestionsState>(initialState) {
     private val stackExchangeService = StackExchangeService()
 
     init {
@@ -46,7 +46,7 @@ class QuestionsFragment : BaseFragment(R.layout.questions_fragment) {
         fun newInstance() = QuestionsFragment()
     }
 
-    private val viewModel: MainViewModel by fragmentViewModel()
+    private val viewModel: QuestionsViewModel by fragmentViewModel()
 
     override fun epoxyController() = simpleController(viewModel) { state ->
         marquee {
