@@ -12,10 +12,11 @@ import com.kamp.will.stackmvrx.model.Questions
 import com.kamp.will.stackmvrx.network.StackExchangeService
 import com.kamp.will.stackmvrx.view.basicRow
 import com.kamp.will.stackmvrx.view.loadingRow
+import com.kamp.will.stackmvrx.view.marquee
 import kotlinx.coroutines.launch
 
 data class QuestionsState(
-    val title: String = "Hello Epoxy",
+    val title: String = "Hello StackMvRx",
     val questions: Async<Questions> = Loading()
 ) : MvRxState
 
@@ -48,6 +49,10 @@ class QuestionsFragment : BaseFragment(R.layout.questions_fragment) {
     private val viewModel: MainViewModel by fragmentViewModel()
 
     override fun epoxyController() = simpleController(viewModel) { state ->
+        marquee {
+            id("title")
+            title(state.title)
+        }
         when (val questions = state.questions) {
             is Loading -> {
                 loadingRow {
