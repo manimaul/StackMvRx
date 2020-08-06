@@ -3,14 +3,14 @@
     package="com.kamp.will.stackmvrx">
 
     <application
-        android:name=".application.StackRxApplication"
+        android:name=".core.MvRxApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.kamp.will.stackmvrx.activity.MainActivity">
+        <activity android:name="com.kamp.will.stackmvrx.core.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,9 +1,9 @@
-package com.kamp.will.stackmvrx.activity
+package com.kamp.will.stackmvrx.core
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.kamp.will.stackmvrx.R
-import com.kamp.will.stackmvrx.questions.fragment.QuestionsFragment
+import com.kamp.will.stackmvrx.features.QuestionsFragment
 
 class MainActivity : AppCompatActivity() {
 
