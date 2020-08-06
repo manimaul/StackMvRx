@@ -1,8 +1,9 @@
-package com.kamp.will.stackmvrx
+package com.kamp.will.stackmvrx.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.kamp.will.stackmvrx.ui.main.MainFragment
+import com.kamp.will.stackmvrx.R
+import com.kamp.will.stackmvrx.fragment.MainFragment
 
 class MainActivity : AppCompatActivity() {
 

@@ -1,17 +1,13 @@
-package com.kamp.will.stackmvrx.ui.main
+package com.kamp.will.stackmvrx.fragment
 
 import android.os.Bundle
 import android.view.View
-import com.airbnb.mvrx.*
-import com.kamp.will.stackmvrx.BuildConfig
+import com.airbnb.mvrx.BaseMvRxFragment
+import com.airbnb.mvrx.fragmentViewModel
+import com.airbnb.mvrx.withState
 import com.kamp.will.stackmvrx.R
+import com.kamp.will.stackmvrx.viewmodel.MainViewModel
 import kotlinx.android.synthetic.main.main_fragment.*
-
-data class MainState(val title: String = "Hello World") : MvRxState
-
-class MainViewModel(initialState: MainState) : BaseMvRxViewModel<MainState>(initialState, debugMode = BuildConfig.DEBUG) {
-    fun getMoreExcited() = setState { copy(title = "$title!") }
-}
 
 class MainFragment : BaseMvRxFragment(R.layout.main_fragment) {
 
